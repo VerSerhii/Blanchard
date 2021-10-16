@@ -19,11 +19,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js" defer></script>    
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript" defer></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript" defer></script> -->
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js" defer></script>
     <script src="js/choices.min.js" defer></script> 
     <script src="js/inputmask.min.js" defer></script>   
-    <script src="js/just-validate.min.js" defer></script>
+    <script src="js/just-validate.min.js" defer></script>   
     <script src="js/main.js" defer></script>   
   </head>
   <body>
@@ -37,36 +37,36 @@
           <label class="menu__btn" id="menu_btn" for="menu__toggle">
             <span></span>
           </label>
-          <div class="header__nav">
-            <nav class="menu__nav" id="nav">
+          <div class="header__nav" id="nav">
+            <nav class="menu__nav" >
               <ul class="list menu__list">
 
                 <li class="menu__item">
-                  <button class="button menu__btn">О нас</button>                 
+                  <button class="button menu__button">О нас</button>                 
                 </li>
 
                 <li class="menu__item">
-                  <button class="button menu__btn">Галерея</button>                  
+                  <button class="button menu__button">Галерея</button>                  
                 </li>
 
                 <li class="menu__item">
-                  <button class="button menu__btn">Каталог</button>                  
+                  <button class="button menu__button">Каталог</button>                  
                 </li>
 
                 <li class="menu__item">
-                  <button class="button menu__btn">События</button>                  
+                  <button class="button menu__button">События</button>                  
                 </li>
 
                 <li class="menu__item">
-                  <button class="button menu__btn">Издания</button>                  
+                  <button class="button menu__button">Издания</button>                  
                 </li>
 
                 <li class="menu__item">
-                  <button class="button menu__btn">Проекты</button>                  
+                  <button class="button menu__button">Проекты</button>                  
                 </li>
 
                 <li class="menu__item">
-                  <button class="button menu__btn">Контакты</button>                
+                  <button class="button menu__button">Контакты</button>                
                 </li>
 
               </ul>
@@ -83,7 +83,7 @@
 
             </div>   
               <button aria-label="Найти" class="header__search"></button>       
-            </div> 
+            </div>          
              
         </div>
 
@@ -99,7 +99,10 @@
 
                     <li class="sub__container-item" tabindex="0">Тинторетто</li>  
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
-                    <li class="sub__container-item" tabindex="0">Леонардо</li>                
+                    <li class="sub__container-item" tabindex="0">Леонардо</li>     
+                    <li class="sub__container-item" tabindex="0">Тинторетто</li>  
+                    <li class="sub__container-item" tabindex="0">Фридрих</li>  
+                    <li class="sub__container-item" tabindex="0">Леонардо</li>           
   
                   </ul>              
                 </div>
@@ -150,7 +153,10 @@
                     <li class="sub__container-item" tabindex="0">Тинторетто</li>  
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
                     <li class="sub__container-item" tabindex="0">Леонардо</li>  
-                    <li class="sub__container-item" tabindex="0">Верроккьо</li>                                       
+                    <li class="sub__container-item" tabindex="0">Верроккьо</li>   
+                    <li class="sub__container-item" tabindex="0">Тинторетто</li>  
+                    <li class="sub__container-item" tabindex="0">Фридрих</li>  
+                    <li class="sub__container-item" tabindex="0">Леонардо</li>                                    
   
                   </ul>                   
                 </div>      
@@ -166,6 +172,9 @@
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
                     <li class="sub__container-item" tabindex="0">Леонардо</li>  
                     <li class="sub__container-item" tabindex="0">Верроккьо</li> 
+                    <li class="sub__container-item" tabindex="0">Тинторетто</li>  
+                    <li class="sub__container-item" tabindex="0">Фридрих</li>  
+                    <li class="sub__container-item" tabindex="0">Леонардо</li>
 
                   </ul>                    
                 </div> 
@@ -204,7 +213,7 @@
           </p>
 
           <button class="button swiper__btn">
-            Подписаться на рассылку
+            <a class="swiper__btn-link" href="#map">Подписаться на рассылку</a>            
           </button>
         </div>          
       </div>

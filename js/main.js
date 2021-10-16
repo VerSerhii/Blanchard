@@ -100,6 +100,18 @@ let gallerySwiper = new Swiper('.swiper__gallery-container', {
   } 
 });
 
+
+/////////////////////// BURGER
+
+window.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('#menu_btn').addEventListener('click', function(){
+    document.querySelector('#nav').classList.toggle('active')
+  })
+})
+
+
+
+
 //Tabs
 
 // let icons =  document.querySelector(".directory__icons").querySelectorAll(".icon-flag");   
