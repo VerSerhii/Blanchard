@@ -109,6 +109,17 @@ window.addEventListener('DOMContentLoaded', function(){
   })
 })
 
+// Search
+
+window.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('.header__search').addEventListener('click', function(){
+    document.querySelector('.header__form').classList.toggle('active')
+  });
+
+  document.querySelector('.header__form-btn').addEventListener('click', function(){
+    document.querySelector('.header__form').classList.remove('active')
+  });
+})
 
 
 
