@@ -301,8 +301,9 @@ html {
 }
 
 .direction__btn {
+  display: flex;  
   color: #fff;
-  padding: 8px 22px 8px 6px;  
+  padding: 8px 6px;  
   transition: all 0.4s linear;
 }
 
@@ -320,33 +321,34 @@ html {
   background: none;
 }
 
-.direction__btn:after {
-  display: inline-block;
-  position: absolute;
-  content: url("../img/icons/arrow.svg");
-  top: 7px;
-  right: 7px;
-  color: #fff;
-  cursor: pointer; 
-  
-  transition: all .4s ease-in-out;
+
+.arrow-bottom-3 { 
+  margin-top: 7px;  
+  margin-left: 3px;
+  width: 12px;
+  height: 12px;   
 }
 
-
-.direction__btn:hover:after {  
-  content: url("../img/icons/dir_arrow_hover.svg");
+.arrow-bottom-3 path {
+  fill: #fff;
+  transition: all 0.4s ease-in-out;
 }
 
-.direction__btn:active:after { 
-  content: url("../img/icons/dir_arrow_activ.svg");
+.arrow-bottom-3 {
+  transform: rotate(90deg);
 }
 
-.direction__btn.active-btn.direction__btn:after {
-  top: 13px;
-  transform: rotate(180deg);
+.direction__btn:hover .arrow-bottom-3 path {
+  fill: #9D5CD0;
 }
 
+.direction__btn:active .arrow-bottom-3 path {
+  fill: #7943a4;  
+}
 
+.direction__btn.active-btn .arrow-bottom-3 {
+  transform: rotate(270deg);
+}
 
 .sub__container {
   position: absolute;
