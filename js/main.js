@@ -1,4 +1,4 @@
-// Dropdown
+// // Dropdown
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.direction__btn').forEach(item => {
   item.addEventListener('click', function() {
@@ -33,6 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 })
+
+
+// Simplebar
+let scrol = Array.from (document.querySelectorAll('.simplebar'))
+scrol.forEach((el) => {
+  new SimpleBar(el, {  
+    autoHide: false,  
+    scrollbarMaxSize: 28,
+  });  
+});  
+
 
 
 
@@ -77,7 +88,15 @@ let gallerySwiper = new Swiper('.swiper__gallery-container', {
       },
       spaceBetween: 0
     },
-    576: {
+    450: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 34
+    },
+
+    767: {
       slidesPerView: 2,
       grid: {
         rows: 2
@@ -109,17 +128,42 @@ window.addEventListener('DOMContentLoaded', function(){
   })
 })
 
+
+
 // Search
 
-window.addEventListener('DOMContentLoaded', function(){
-  document.querySelector('.header__search').addEventListener('click', function(){
-    document.querySelector('.header__form').classList.toggle('active')
-  });
+document.addEventListener('DOMContentLoaded', () => { 
 
-  document.querySelector('.header__form-btn').addEventListener('click', function(){
-    document.querySelector('.header__form').classList.remove('active')
-  });
+  let button = document.querySelector('.header__search') 
+  let form = document.querySelector('.header__form')
+
+  button.addEventListener('click', () => { 
+    form.classList.toggle('active') 
+  })
+
+  window.addEventListener('click', e => { 
+    let target = e.target
+    if (!target.closest('.header__form') && !target.closest('.header__search')) {
+      form.classList.remove('active') 
+    }
+  })
+
 })
+
+
+// Smooth scroll
+
+$("[data-scroll]").on("click", function(event) {
+  event.preventDefault();
+
+  var $this = $(this),
+      blockId = $this.data('scroll'),
+      blockOffset = $(blockId).offset().top;    
+
+  $("html, body").animate({
+      scrollTop:  blockOffset
+  }, 500);
+});
 
 
 
@@ -178,6 +222,11 @@ window.addEventListener('DOMContentLoaded', function(){
 //   slidesPerView: 3,
 //   spaceBetween: 50, 
 // })
+
+
+
+
+
 
 
 

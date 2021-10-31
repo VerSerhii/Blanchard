@@ -8,19 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>       
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> 
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
     <link rel="stylesheet" href="css/choices.min.css" />
     <link rel="stylesheet" href="css/justValidateTooltip.min.css">
     <link rel="stylesheet" href="css/normalize.css" /> 
-    <link rel="stylesheet" href="css/style.css" />       
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js" defer integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js" defer></script>    
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript" defer></script> -->
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js" defer></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript" defer></script> -->   
     <script src="js/choices.min.js" defer></script> 
     <script src="js/inputmask.min.js" defer></script>   
     <script src="js/just-validate.min.js" defer></script>   
@@ -42,11 +41,11 @@
               <ul class="list menu__list">
 
                 <li class="menu__item">
-                  <button class="button menu__button">О нас</button>                 
+                  <button class="button menu__button" data-scroll="#about">О нас</button>                 
                 </li>
 
                 <li class="menu__item">
-                  <button class="button menu__button">Галерея</button>                  
+                  <button class="button menu__button" data-scroll="#gallery">Галерея</button>                  
                 </li>
 
                 <li class="menu__item">
@@ -81,12 +80,14 @@
               </a>
             </div>       
 
-            </div>   
+            </div> 
+
             <form class="header__form" action="#">
-              <input class="header__form-input" type="text" placeholder="Поиск"> 
-              <button class="header__form-btn"  type="submit"  aria-label="Найти"></button>                       
+              <input class="header__form-input" type="text">   
+              <button class="header__form-btn"  type="submit"  aria-label="Найти"></button>                                              
             </form>
-            <button aria-label="Найти" class="header__search"></button>                     
+            <button aria-label="Найти" class="header__search"></button> 
+                             
           </div>              
         </div>
 
@@ -97,8 +98,8 @@
             <ul class="list direction__list">
               <li class="direction__item">
                 <button class="button direction__btn">Реализм</button> 
-                <div class="sub__container" data-simplebar>
-                  <ul class="list sub__container-list">
+                <div class="sub__container simplebar-container">
+                  <ul class="list sub__container-list simplebar">
 
                     <li class="sub__container-item" tabindex="0">Тинторетто</li>  
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
@@ -114,8 +115,8 @@
 
               <li class="direction__item">
                 <button class="button direction__btn">Импрессионизм</button>  
-                <div class="sub__container" data-simplebar>
-                  <ul class="list sub__container-list">
+                <div class="sub__container simplebar-container">
+                  <ul class="list sub__container-list simplebar">
 
                     <li class="sub__container-item" tabindex="0">Тинторетто</li>  
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
@@ -131,8 +132,8 @@
 
               <li class="direction__item">
                 <button class="button direction__btn">Постимпрессионизм</button>  
-                <div class="sub__container" data-simplebar>
-                  <ul class="list sub__container-list">
+                <div class="sub__container simplebar-container">
+                  <ul class="list sub__container-list simplebar">
 
                     <li class="sub__container-item" tabindex="0">Тинторетто</li>  
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
@@ -150,8 +151,8 @@
 
               <li class="direction__item">
                 <button class="button direction__btn">Авангард</button> 
-                <div class="sub__container" data-simplebar>
-                  <ul class="list sub__container-list">
+                <div class="sub__container simplebar-container" >
+                  <ul class="list sub__container-list simplebar">
 
                     <li class="sub__container-item" tabindex="0">Тинторетто</li>  
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
@@ -168,8 +169,8 @@
 
               <li class="direction__item">
                 <button class="button direction__btn">Футуризм</button>   
-                <div class="sub__container" data-simplebar>
-                  <ul class="list sub__container-list">
+                <div class="sub__container simplebar-container">
+                  <ul class="list sub__container-list simplebar">
 
                     <li class="sub__container-item" tabindex="0">Тинторетто</li>  
                     <li class="sub__container-item" tabindex="0">Фридрих</li>  
@@ -215,15 +216,13 @@
             плановых заданий создаёт предпосылки для новых предложений.
           </p>
 
-          <button class="button swiper__btn">
-            <a class="swiper__btn-link" href="#map">Подписаться на рассылку</a>            
-          </button>
+          <button class="button swiper__btn">Подписаться на рассылку</button>
         </div>          
       </div>
     </header>
 
     <main>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container about__container">
           <h2 class="heading about__heading">О нас</h2>
           <p class="about__description">
